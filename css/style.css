@@ -1,1 +1,177 @@
-/*# sourceMappingURL=style.css.map */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700;900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  box-shadow: 0 2px 2px rgb(191, 191, 191);
+}
+
+.logo {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.logo img {
+  height: 30px;
+}
+
+button {
+  padding: 15px;
+  border-radius: 50px;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(to top, #9356dc, #ff79da);
+  box-shadow: 0 2px 7px grey;
+}
+
+.presentation .location {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+  background-color: rgb(234, 234, 234);
+  z-index: -1;
+}
+
+.presentation .description {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px 0;
+  padding: 45px 0 60px 0;
+  background-color: rgb(245, 245, 245);
+}
+
+.presentation .description h1 {
+  text-align: center;
+  width: 250px;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.presentation .description p {
+  text-align: center;
+  width: 300px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.functioning {
+  padding: 50px 20px;
+}
+
+.functioning h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.functioning .list {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 25px 0;
+}
+.functioning .list li {
+  width: 100%;
+  text-align: center;
+}
+.functioning .list a {
+  position: relative;
+  display: block;
+  border-radius: 20px;
+  color: #000;
+  font-weight: 500;
+  padding: 20px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 0 2px 10px rgb(191, 191, 191);
+}
+.functioning .list a span {
+  position: absolute;
+  left: -1.5%;
+  top: 25%;
+  background-color: #9356dc;
+  border-radius: 50%;
+  width: 10px;
+  padding: 5px;
+  color: #fff;
+  font-size: 0.8rem;
+}
+.functioning .list a i {
+  margin-right: 50px;
+  color: grey;
+}
+.functioning .list a:hover {
+  background-color: #f2eafb;
+}
+.functioning .list a:hover > i {
+  color: #9356dc;
+}/*# sourceMappingURL=style.css.map */

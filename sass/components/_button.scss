@@ -1,0 +1,10 @@
+button {
+    padding: 15px;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    background: linear-gradient(to top, $primary-color, $secondary-color);
+    box-shadow: 0 2px 7px grey;
+}
