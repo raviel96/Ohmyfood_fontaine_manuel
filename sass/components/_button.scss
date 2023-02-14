@@ -8,3 +8,8 @@ button {
     background: linear-gradient(to top, $primary-color, $secondary-color);
     box-shadow: 0 2px 7px grey;
 }
+
+button:hover {
+    box-shadow: 0 7px 7px grey;
+    filter: brightness(115%)
+}

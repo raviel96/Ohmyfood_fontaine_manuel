@@ -1,5 +1,21 @@
-header {
+.header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     box-shadow: 0 2px 2px rgb(191, 191, 191);
+
+    & a {
+        color: #000;
+    }
+
+    & i {
+        position: absolute;
+        font-size: 20px;
+        top: 30%;
+        left: 5%;
+    }
+
 }
 
 .logo {
