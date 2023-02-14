@@ -14,13 +14,24 @@
 }
 
 .card {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     color: #000;
-    padding: 10px;
+    // padding: 10px;
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow: 0 3px 5px rgb(191, 191, 191);
     animation: card-animation 1s linear;
+
+    &:hover > .box{
+        animation: box-animation 1s;
+    }
+
+    & .card-description {
+        width: 90%;
+        height: 100%;
+        padding: 10px;
+    }
 
     & h3 {
         font-weight: 500;
@@ -29,8 +40,7 @@
 
     & .price {
         display: flex;
-        justify-content: space-between;
-
+        justify-content: space-between;*
         & p:nth-child(1) {
             font-size: 0.9rem;
             font-weight: 200;
@@ -40,7 +50,20 @@
             margin-right: 15px;
         }
     }
-    
+
+    & .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        width: 0px;
+        border-radius: 0 15px 15px 0;
+        background-color: $tertiary-color;
+
+        & i {
+            color: #fff;
+        }
+    }
     
 }
 
@@ -59,4 +82,9 @@
     0% {opacity: 0;}
 
     100% {opacity: 1;}
+}
+
+@keyframes box-animation {
+    0% {width: 0px;}
+    100% {width: 70px;}
 }

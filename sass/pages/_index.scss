@@ -143,10 +143,6 @@
             font-size: 1.4rem;
         }
 
-        & i:hover{
-            animation: fill-animation 2s linear;
-        }
-
     }
 
     & .new {
@@ -166,9 +162,5 @@
     
 }
 
-@keyframes fill-animation {
-    0% {background: transparent;}
-    100% {background: linear-gradient(to bottom, $primary-color, $secondary-color); background-clip: text; color: transparent;}
-}
 
 

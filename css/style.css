@@ -172,13 +172,21 @@ button:hover {
 }
 
 .card {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   color: #000;
-  padding: 10px;
   border-radius: 15px;
   margin-bottom: 15px;
   box-shadow: 0 3px 5px rgb(191, 191, 191);
   animation: card-animation 1s linear;
+}
+.card:hover > .box {
+  animation: box-animation 1s;
+}
+.card .card-description {
+  width: 90%;
+  height: 100%;
+  padding: 10px;
 }
 .card h3 {
   font-weight: 500;
@@ -188,12 +196,24 @@ button:hover {
   display: flex;
   justify-content: space-between;
 }
-.card .price p:nth-child(1) {
+* .card .price p:nth-child(1) {
   font-size: 0.9rem;
   font-weight: 200;
 }
 .card .price p:nth-child(2) {
   margin-right: 15px;
+}
+.card .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 0px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
+}
+.card .box i {
+  color: #fff;
 }
 
 .menu footer {
@@ -212,6 +232,14 @@ button:hover {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes box-animation {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70px;
   }
 }
 .presentation .location {
@@ -346,9 +374,6 @@ button:hover {
   top: 40%;
   font-size: 1.4rem;
 }
-.restaurant-card .card-content i:hover {
-  animation: fill-animation 2s linear;
-}
 .restaurant-card .new {
   position: relative;
 }
@@ -361,16 +386,4 @@ button:hover {
   background-color: #99e2d0;
   color: #1b6150;
   padding: 7px;
-}
-
-@keyframes fill-animation {
-  0% {
-    background: transparent;
-  }
-  100% {
-    background: linear-gradient(to bottom, #9356dc, #ff79da);
-    -webkit-background-clip: text;
-            background-clip: text;
-    color: transparent;
-  }
 }/*# sourceMappingURL=style.css.map */
