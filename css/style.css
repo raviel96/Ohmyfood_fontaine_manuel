@@ -181,7 +181,11 @@ button:hover {
   animation: card-animation 1s linear;
 }
 .card:hover > .box {
-  animation: box-animation 1s;
+  width: 70px;
+}
+.card:hover > .box > i {
+  opacity: 1;
+  animation: check-animation 1s;
 }
 .card .card-description {
   width: 90%;
@@ -211,9 +215,12 @@ button:hover {
   width: 0px;
   border-radius: 0 15px 15px 0;
   background-color: #99e2d0;
+  transition: width 1s;
 }
 .card .box i {
+  transition: opacity 1s;
   color: #fff;
+  opacity: 0;
 }
 
 .menu footer {
@@ -234,12 +241,12 @@ button:hover {
     opacity: 1;
   }
 }
-@keyframes box-animation {
+@keyframes check-animation {
   0% {
-    width: 0px;
+    transform: rotate(0);
   }
   100% {
-    width: 70px;
+    transform: rotate(360deg);
   }
 }
 .presentation .location {

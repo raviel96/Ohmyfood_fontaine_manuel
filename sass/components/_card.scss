@@ -24,7 +24,13 @@
     animation: card-animation 1s linear;
 
     &:hover > .box{
-        animation: box-animation 1s;
+        // animation: box-animation 1s;
+        width: 70px;
+    }
+
+    &:hover > .box > i {
+        opacity: 1;
+        animation: check-animation 1s;
     }
 
     & .card-description {
@@ -59,9 +65,12 @@
         width: 0px;
         border-radius: 0 15px 15px 0;
         background-color: $tertiary-color;
+        transition: width 1s;
 
         & i {
+            transition: opacity 1s;
             color: #fff;
+            opacity: 0;
         }
     }
     
@@ -84,7 +93,7 @@
     100% {opacity: 1;}
 }
 
-@keyframes box-animation {
-    0% {width: 0px;}
-    100% {width: 70px;}
+@keyframes check-animation {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(360deg);}
 }
