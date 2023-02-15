@@ -143,6 +143,19 @@
             font-size: 1.4rem;
         }
 
+        & i:hover + .full-heart {
+            height: 1.4rem;
+        }
+
+        & .full-heart {
+            background: linear-gradient(to bottom, $primary-color, $secondary-color);
+            background-clip: text;
+            color: transparent;
+            height: 0;
+            transition: height 2s;
+            z-index: -1;
+        }
+
     }
 
     & .new {
@@ -162,5 +175,21 @@
     
 }
 
+@media screen and (min-width: 992px) {
+    .functioning {
 
+        & .list {
+            flex-flow: row;
+            gap: 0 25px;
+        }
+    }
 
+    .restaurant {
+
+        & .card-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 20px;
+        }
+    }
+}

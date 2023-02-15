@@ -143,6 +143,14 @@ body {
   color: #fff;
 }
 
+@media screen and (min-width: 992px) {
+  .footer {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 button {
   padding: 15px;
   border-radius: 50px;
@@ -247,6 +255,13 @@ button:hover {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+@media screen and (min-width: 992px) {
+  .restaurant-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 20px;
   }
 }
 .presentation .location {
@@ -381,6 +396,18 @@ button:hover {
   top: 40%;
   font-size: 1.4rem;
 }
+.restaurant-card .card-content i:hover + .full-heart {
+  height: 1.4rem;
+}
+.restaurant-card .card-content .full-heart {
+  background: linear-gradient(to bottom, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  height: 0;
+  transition: height 2s;
+  z-index: -1;
+}
 .restaurant-card .new {
   position: relative;
 }
@@ -393,4 +420,16 @@ button:hover {
   background-color: #99e2d0;
   color: #1b6150;
   padding: 7px;
+}
+
+@media screen and (min-width: 992px) {
+  .functioning .list {
+    flex-flow: row;
+    gap: 0 25px;
+  }
+  .restaurant .card-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
