@@ -1,3 +1,20 @@
+.container {
+    position: relative;
+}
+
+.loader {
+    position: absolute;
+    top : calc(20% - 50px);
+    left : calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+    border: 3px solid  grey;
+    border-bottom: 3px solid $tertiary-color;
+    border-radius: 50%;
+    animation: loading-animation 3s linear 1;
+    animation-fill-mode: forwards;
+}
+
 // Section Presentation
 .presentation .location {
     position: relative;
@@ -173,6 +190,11 @@
         }
     }
     
+}
+
+@keyframes loading-animation {
+    0% {transform: rotate(0deg); opacity:1;}
+    100% {transform: rotate(360deg); opacity: 0; display: none;}
 }
 
 @media screen and (min-width: 992px) {

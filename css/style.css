@@ -167,6 +167,10 @@ button:hover {
   filter: brightness(115%);
 }
 
+.entrance, .dish, .dessert {
+  opacity: 0;
+  animation: card-animation 1.5s linear forwards;
+}
 .entrance h2, .dish h2, .dessert h2 {
   font-weight: 200;
   margin-top: 20px;
@@ -179,6 +183,18 @@ button:hover {
   margin: 5px 0 20px 0;
 }
 
+.entrance {
+  animation-delay: 0.3s;
+}
+
+.dish {
+  animation-delay: 0.7s;
+}
+
+.dessert {
+  animation-delay: 1s;
+}
+
 .card {
   display: flex;
   justify-content: space-between;
@@ -186,7 +202,6 @@ button:hover {
   border-radius: 15px;
   margin-bottom: 15px;
   box-shadow: 0 3px 5px rgb(191, 191, 191);
-  animation: card-animation 1s linear;
 }
 .card:hover > .box {
   width: 70px;
@@ -263,7 +278,63 @@ button:hover {
     grid-template-columns: 1fr 1fr;
     gap: 0 20px;
   }
+  .card {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card .card-description {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px 0;
+  }
+  .card h3 {
+    font-size: 1.2rem;
+  }
+  .card .price {
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 0;
+  }
+  .card .price p:nth-child(1) {
+    font-size: 1rem;
+    font-weight: 200;
+  }
+  .card .price p:nth-child(2) {
+    margin-right: 0;
+    font-size: 1rem;
+  }
+  .card .box {
+    height: 0;
+    width: 100%;
+    border-radius: 0 0 15px 15px;
+    transition: height 1s;
+  }
+  .card:hover > .box {
+    height: 70px;
+    width: 100%;
+  }
 }
+.container {
+  position: relative;
+}
+
+.loader {
+  position: absolute;
+  top: calc(20% - 50px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  border: 3px solid grey;
+  border-bottom: 3px solid #99e2d0;
+  border-radius: 50%;
+  animation: loading-animation 3s linear 1;
+  animation-fill-mode: forwards;
+}
+
 .presentation .location {
   position: relative;
   padding: 20px 0;
@@ -422,6 +493,17 @@ button:hover {
   padding: 7px;
 }
 
+@keyframes loading-animation {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    display: none;
+  }
+}
 @media screen and (min-width: 992px) {
   .functioning .list {
     flex-flow: row;

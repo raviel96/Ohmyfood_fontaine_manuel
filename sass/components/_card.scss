@@ -1,4 +1,6 @@
 .entrance, .dish, .dessert{
+    opacity: 0;
+    animation: card-animation 1.5s linear forwards;
     & h2 {
         font-weight: 200;
         margin-top: 20px;
@@ -13,18 +15,26 @@
     }
 }
 
+.entrance {
+    animation-delay: 0.3s;
+}
+
+.dish {
+    animation-delay: 0.7s;
+}
+.dessert {
+    animation-delay: 1s;
+}
+
 .card {
     display: flex;
     justify-content: space-between;
     color: #000;
-    // padding: 10px;
     border-radius: 15px;
     margin-bottom: 15px;
     box-shadow: 0 3px 5px rgb(191, 191, 191);
-    animation: card-animation 1s linear;
 
     &:hover > .box{
-        // animation: box-animation 1s;
         width: 70px;
     }
 
@@ -103,6 +113,53 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0 20px
+    }
+
+    .card {
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+
+        & .card-description {
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px 0;
+        }
+
+        & h3 {
+            font-size: 1.2rem;
+        }
+
+        & .price {
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px 0;
+
+            & p:nth-child(1) {
+                font-size: 1rem;
+                font-weight: 200;
+            }
+    
+            & p:nth-child(2) {
+                margin-right: 0;
+                font-size: 1rem;
+            }
+        }
+
+        & .box {
+            height: 0;
+            width: 100%;
+            border-radius: 0 0 15px 15px;
+            transition: height 1s;
+        }
+
+        &:hover > .box{
+            height: 70px;
+            width: 100%;
+        }
     }
 
 }
